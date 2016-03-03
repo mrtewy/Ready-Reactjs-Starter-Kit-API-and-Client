@@ -1,10 +1,10 @@
 
 body {
-	background:red;
+	background:#000;
 }
 
 .main_container {
-	background: #000;
+	margin: 50px auto;
 }
 
 .main_headline {
