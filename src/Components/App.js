@@ -1,4 +1,3 @@
-// import React from 'react';
 import React, {Component, PropTypes} from 'react';
 import $ from 'jquery';
 import styles from '../Styles/App.css';

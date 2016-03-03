@@ -1,15 +1,16 @@
 {
-  "name": "react-hello-world",
+  "name": "ready-reactjs-starter-kit-api-and-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal ready reactjs starter kit, just for beginner to luanch a reactjs project.\r This kit come with nessary plugin and dependencies as I desired to have to learn\r I'm implemented the same structure of MEAN Stack, but replace AnguarJS with ReactJS\r Gulp with webpack, and I love what I found an amazing tools and utilities.",
   "main": "index.js",
   "scripts": {
+    "test": "mocha tests/*-test.js",
     "start": "nodemon server.js",
     "watch": "rimraf dist && set NODE_ENV=development && webpack --config ./webpack.config.js --progress --colors --watch",
     "build": "rimraf dist && set NODE_ENV=production && webpack -p --config ./webpack.production.config.js --progress --colors"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tewy Tew (mrtewy@gmail.com)",
+  "license": "MIT",
   "dependencies": {
     "babel-cli": "^6.4.0",
     "body-parser": "^1.14.1",
@@ -22,9 +23,17 @@
     "path": "^0.12.7",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
-    "whatwg-fetch": "^0.11.0"
+    "whatwg-fetch": "^0.11.0",
+    "react-tools": "^0.12.2"
   },
   "devDependencies": {
+    "blanket": "^1.1.6",
+    "coveralls": "^2.11.2",
+    "glob": "^4.3.5",
+    "jsdom": "^3.1.1",
+    "mocha": "2.3.3",
+    "mocha-jsdom": "^0.2.1",
+    "mocha-lcov-reporter": "0.0.1",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.2.1",
     "babel-eslint": "^4.1.6",
@@ -38,6 +47,7 @@
     "core-js": "^1.1.0",
     "css-loader": "^0.19.0",
     "extract-text-webpack-plugin": "^0.8.2",
+    "html-minify-loader": "^1.1.0",
     "html-webpack-plugin": "^1.6.1",
     "postcss-loader": "^0.6.0",
     "react-transform-hmr": "^1.0.0",
@@ -47,5 +57,37 @@
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrtewy/Ready-Reactjs-Starter-Kit-API-and-Client.git"
+  },
+  "keywords": [
+    "es6",
+    "mongodb",
+    "express",
+    "reactjs",
+    "nodejs",
+    "babel",
+    "webpack",
+    "reactjs",
+    "api",
+    "reactjs",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/mrtewy/Ready-Reactjs-Starter-Kit-API-and-Client/issues"
+  },
+  "homepage": "https://github.com/mrtewy/Ready-Reactjs-Starter-Kit-API-and-Client#readme",
+  "config": {
+    "blanket": {
+      "pattern": "src",
+      "data-cover-never": [
+        "dist",
+        "node_modules",
+        "tests"
+      ],
+      "loader": "../../../tests/blanket-stub-jsx.js"
+    }
   }
 }
