@@ -16,6 +16,7 @@ Gulp with webpack, and I love what I found an amazing tools and utilities.
 I made it easy because i'm still learning, but not yet completely 100% need many advise from you all. And Thanks you many example repos.
 # How to
 - clone 
+- npm install -g nodemon *install nodemon*
 - npm install
 
 
