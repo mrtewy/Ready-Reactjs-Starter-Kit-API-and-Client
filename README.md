@@ -13,4 +13,13 @@ Gulp with webpack, and I love what I found an amazing tools and utilities.
 - Babel
 - Webpack
 
-Thanks you many example repos.
+I made it easy because i'm still learning, but not yet completely 100% need many advise from you all. And Thanks you many example repos.
+# How to
+- clone 
+- npm install
+
+
+# Run
+- npm run watch // To run the webpack and compile the bundle files.
+- npm run start // run web server
+- npm run build // compile buddle files for production
