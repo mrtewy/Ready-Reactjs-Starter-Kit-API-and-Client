@@ -4,10 +4,10 @@ body {
 }
 
 .main_container {
-	background: #fff;
+	background: #000;
 }
 
 .main_headline {
-	color: #000;
+	color: red;
 	font-size: 20px;
 }
