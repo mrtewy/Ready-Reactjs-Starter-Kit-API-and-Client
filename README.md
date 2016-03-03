@@ -1,5 +1,7 @@
 # Ready-Reactjs-Starter-Kit-API-and-Client
 
+[![Build Status](https://travis-ci.org/mrtewy/Ready-Reactjs-Starter-Kit-API-and-Client.svg?branch=master)](https://travis-ci.org/mrtewy/Ready-Reactjs-Starter-Kit-API-and-Client)
+
 A minimal ready reactjs starter kit, just for beginner to luanch a reactjs project.
 This kit come with nessary plugin and dependencies as I desired to have to learn
 I'm implemented the same structure of MEAN Stack, but replace AnguarJS with ReactJS
