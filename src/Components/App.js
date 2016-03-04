@@ -1,8 +1,16 @@
 import React, {Component, PropTypes} from 'react';
 import $ from 'jquery';
-import styles from '../Styles/App.css';
 
 export default class App extends React.Component {
+  
+  static propTypes = { 
+    usersData: React.PropTypes.array
+  }
+  
+  static defaultProps = { 
+    usersData: []
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -30,8 +38,8 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <div className={styles.main_container}>
-           <ul className={styles.main_headline}>
+        <div className="">
+           <ul className="">
            {usersListsData}
            </ul>
         </div>
@@ -40,11 +48,4 @@ export default class App extends React.Component {
   }
 
 }
-
-App.propTypes = { 
-  usersData: React.PropTypes.array
-};
-App.defaultProps = { 
-  usersData: []
-};
-  
+ 

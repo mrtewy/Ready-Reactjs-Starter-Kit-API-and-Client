@@ -10,6 +10,7 @@ const app                   = express();
 app.use(logger('dev'));
 app.use(compression());
 app.use(express.static(path.join(__dirname, 'dist')));
+app.use('assets/', express.static(path.join(__dirname + 'node_modules/')); // redirect CSS bootstrap
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

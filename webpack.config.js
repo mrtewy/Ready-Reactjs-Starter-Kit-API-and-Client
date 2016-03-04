@@ -9,7 +9,7 @@ var StatsPlugin = require('stats-webpack-plugin');
 var BUILD_DIR = path.join(__dirname, '/dist/');
 var APP_DIR = path.join(__dirname, '/src/');
 
-var config = {
+module.exports = {
   devtool: 'eval',
   entry: [
     'webpack-hot-middleware/client?reload=true',
@@ -38,21 +38,15 @@ var config = {
       new webpack.optimize.OccurenceOrderPlugin()
   ],
   module: {
-    loaders: [{
-      test: /\.js?$/,
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        "presets": ["es2015", "stage-0", "react"]
-      }
-    }, {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[hash:base64:7]!postcss')
-    }]
+    loaders: 
+    [
+      {test: /\.js?$/,exclude: /node_modules/,loader: 'babel',query: {"presets": ["es2015", "stage-0", "react"]}},
+      {test: /\.css$/,loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[hash:base64:7]!postcss')},
+    ]
   },
   postcss: [
     require('autoprefixer')
   ]
 };
 
-module.exports = config;
+ 
