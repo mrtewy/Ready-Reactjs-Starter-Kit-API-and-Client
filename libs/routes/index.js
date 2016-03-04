@@ -20,6 +20,15 @@ module.exports = function (app) {
     }
   }
 
+  // 404 Handling
+  router.get('*', function(req, res){
+    res.json({
+      callback:[],
+      status:'404',
+      message:'Page you request are not found',
+    });
+  });
+
   // set root index
   app.use('/api', router);
 

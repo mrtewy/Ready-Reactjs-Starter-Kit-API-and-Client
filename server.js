@@ -23,7 +23,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-
 /* Router */
 const routes = require('./libs/routes');
 // Wire up your routes using the express
