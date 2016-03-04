@@ -14,7 +14,7 @@ export default class App extends React.Component {
   componentDidMount() {
     this.serverRequest = $.get(this.state.source, function (result) {
       this.setState({
-        users: result
+        users: result.callback
       });
     }.bind(this));
   }
@@ -24,9 +24,8 @@ export default class App extends React.Component {
   }
 
   render() {
-
-    const usersListsData = this.state.users.map(function(user, index) {
-      return <li key={user.id}>{user.author}</li>;
+    const usersListsData = this.state.users.map(function(callback, index) {
+      return <li key={callback.id}>{callback.author}</li>;
     });
 
     return (
